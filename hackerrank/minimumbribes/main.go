@@ -6,15 +6,15 @@ import "fmt"
 func minimumBribes(q []int32) {
 	chaotic := false
 	bribes := 0
-	for i := 0; i < len(q); i++ {
-		if q[i] - int32((i+1)) > int32(2) {
+	for k, v := range q {
+		if v - int32(( k + 1 )) > int32(2) {
 			chaotic = true
 		}
-		for j := int(q[i]) - 2; j < i; j++ {
+		for j := int(v) - 2; j < k; j++ {
 			if j < 0 {
 				j = 0
 			}
-			if q[j] > q[i] {
+			if q[j] > v {
 				bribes++
 			}
 		}
