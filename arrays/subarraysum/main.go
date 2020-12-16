@@ -15,7 +15,6 @@ func subarraySum(arr []int, sum int) bool {
 			fmt.Printf("%v %v ", i+1, bound+1)
 			return  true
 		}
-		fmt.Println(bound)
 		bound++
 		if bound < len(arr) {
 			asum += arr[bound]
